@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  background: #f0f2f5
 }
 a:link {
   text-decoration: none;
@@ -65,3 +66,33 @@ a:hover {
   /*background: #32e;*/
   float: left;
 }
+#right .header {
+  background: #fff;
+  height: 50px;
+  padding: 8px 15px;
+}
+#right .operateBox {
+  float: right;
+  text-align: right;
+}
+.operateBox .userPhoto {
+  width: 35px;
+  height: 35px;
+  margin: 0 0 0 8px;
+}
+.operateBox .marginIcon {
+  margin: 0 8px;
+}
+
+/*#right .container-fluid {
+  background: #f0f2f5
+}*/
+
+
+
+/* 修改bootstrap中不符合项目需要的样式 start */
+.breadcrumb {
+  background: none;
+  margin: 10px 0;
+}
+/* 修改bootstrap中不符合项目需要的样式 end */
