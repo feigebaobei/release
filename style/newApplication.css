@@ -1,0 +1,98 @@
+    * {
+        margin: 0;
+        padding: 0;
+      }
+      
+      ul,ol {
+        list-style: none;
+      }
+      #right {
+        background: #e9ecef;
+      }
+      
+      .navTitle {
+        padding: 8px 0 6px 50px;
+        background: #e9ecef;
+      }
+      
+      .content {
+        width: 96%;
+        background: #fff;
+        margin: 0 auto;
+      }
+      
+      .content .content_title {
+        padding: 10px 0 10px 30px;
+        border-bottom: 1px solid #B4BCCC;
+      }
+      
+      .content_nav {
+        padding: 16px 24px 6px;
+      }
+      
+      .content_table {
+        width: 96%;
+        margin: 0 auto;
+        position: relative;
+      }
+      
+      .content_table_btn{
+        position: absolute;
+        left: 0;
+        top: 10px;
+      }
+      
+      .content_form {
+        padding: 20px 200px 0 30px;
+      }
+
+      .Approver_col {
+        padding: 12px 0;
+        display: flex;
+      }
+
+      .Approver_row {
+        width:100px;
+        height:100px;
+        background: #eee;
+        border-radius: 50%;
+        margin-left: 12px;
+      }
+      .Approver_col .Approver_row img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+
+      #add {
+        width:100px;
+        height:100px;
+        margin-left: 12px;
+        border-radius: 0;
+        border:1px dashed #999;
+        position: relative;
+      }
+
+      #add .add1 {
+        font-size: 50px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height:80px;
+        color: #666;
+        text-align: center;
+        position: absolute;
+      }
+
+      #add .add2{
+        width:100%;
+        font-size: 14px;
+        text-align: center;
+        position: absolute;
+        bottom: 2px;
+      }
+
+      .content .content_footer {
+        padding: 24px 0 30px 50px;
+        border-top: 1px solid #B4BCCC;
+      }
