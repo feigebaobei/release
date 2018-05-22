@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="../style/bootstrap.css">
   <!-- <link rel="stylesheet" href="../style/bootstrap.css"> -->
   <link rel="stylesheet" href="../style/common.css">
+  <link rel="stylesheet" href="../style/app.css">
   <script src="../script/jquery.min.js"></script>
   <!-- <script src="../script/popper.js"></script> -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js"></script> -->
@@ -61,7 +62,7 @@
   <!-- 导航部分 end -->
   <!-- 右边部分 start -->
   <div id="right">
-    <header>
+    <header class="header">
       <!-- <div class="dropdown">
         <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown trigger
@@ -85,6 +86,13 @@
           <li>text1</li>
           <li>text1</li>
         </ul>
+        <div class="operateBox">
+          <span class="glyphicon glyphicon-search marginIcon" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-tag marginIcon" aria-hidden="true"></span>
+          <!-- <span class="glyphicon glyphicon-th-list img-circle" aria-hidden="true"></span> -->
+          <img src="../images/food.jpg" alt="头像" class="img-circle userPhoto">
+          <span class="userName">momo.zxy</span>
+        </div>
       </div>
 
       <!-- 
@@ -99,6 +107,7 @@
       </ul> -->
     </header>
     <div class="container-fluid">
+      <!-- 面包屑导航 start -->
       <header>
         <ol class="breadcrumb">
           <li><a href="#">Home</a></li>
@@ -106,71 +115,55 @@
           <li class="active">Data</li>
         </ol>
       </header>
-      <div class="row">
-        <div class="col-md-8">8888</div>
-        <div class="col-md-4">4444</div>
+      <!-- 面包屑导航 end -->
+      <!-- 每个页面的主要内容 state -->
+      <div class="card">
+        <div class="appPhotoBox">
+          <img src="../images/food.jpg" alt="应用头像" class="appPhoto img-circle">
+        </div>
+        <div class="appContentBox">
+          <h4>学而思网校</h4>
+          <p>那时候我只会想自己想要什么，从不想自己拥有什么。</p>
+        </div>
+        <div class="appOperateBox">
+          <span class="check">查看</span>
+          <span class="split">|</span>
+          <span class="edit">编辑</span>
+        </div>
       </div>
+      <div class="card">
+        <div class="appPhotoBox">
+          <img src="../images/food.jpg" alt="应用头像" class="appPhoto img-circle">
+        </div>
+        <div class="appContentBox">
+          <h4>学而思网校 <span class="wait">（待审核）</span></h4>
+          <p>那时候我只会想自己想要什么，从不想自己拥有什么。</p>
+        </div>
+        <div class="appOperateBox">
+          <span class="check">查看</span>
+          <span class="split">|</span>
+          <span class="edit">编辑</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="appPhotoBox">
+          <img src="../images/food.jpg" alt="应用头像" class="appPhoto img-circle">
+        </div>
+        <div class="appContentBox">
+          <h4>学而思网校 <span class="ng">（审核未通过）</span></h4>
+          <p>那时候我只会想自己想要什么，从不想自己拥有什么。</p>
+        </div>
+        <div class="appOperateBox">
+          <span class="check">查看</span>
+          <span class="split">|</span>
+          <span class="edit">编辑</span>
+        </div>
+      </div>
+      <div class="addCard">
+        <p>+新增应用</p>
+      </div>
+      <!-- 每个页面的主要内容 end -->
     </div>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
   </div>
   <!-- 右边部分 end -->
 </body>
