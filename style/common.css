@@ -1,3 +1,4 @@
+/* common css start */
 html,
 body {
   height: 100%;
@@ -15,6 +16,11 @@ a:active {
 a:hover {
   text-decoration: none;
 }
+.empty {
+  clear: both;
+}
+
+
 
 #left {
   width: 240px;
@@ -35,7 +41,7 @@ a:hover {
 #left > header {
   padding: 15px 20px;
   margin: 0 0 5px 0;
-  background: #00284d;
+  background: #00284d
 }
 #left .systomLogo {
   width: 35px;
@@ -66,7 +72,7 @@ a:hover {
   /*background: #32e;*/
   float: left;
 }
-#right header {
+#right > .header {
   background: #fff;
   height: 50px;
   padding: 8px 15px;
@@ -87,6 +93,7 @@ a:hover {
 /*#right .container-fluid {
   background: #f0f2f5
 }*/
+/* common css end */
 
 
 
