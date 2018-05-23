@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>发布上线系统-应用信息</title>
-  <link rel="stylesheet" href="../style/bootstrap.css">
+  <!-- <link rel="stylesheet" href="../style/bootstrap.css"> -->
+  <link rel="stylesheet" href="../style/bootstrap.4.0.css">
+  <!-- <link rel="stylesheet" href="../style/open-iconic-bootstrap.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-iconic@1.1.1/font/css/open-iconic-bootstrap.css">
+
   <link rel="stylesheet" href="../style/common.css">
   <link rel="stylesheet" href="../style/appInfo.css">
   <script src="../script/jquery.min.js"></script>
@@ -57,12 +61,12 @@
   <!-- 导航部分 end -->
 
   <!-- 右边部分 start -->
-  <div id="right">
+  <div id="right" class="">
 
     <!-- 头部 start -->
-    <header class="header">
-      <div class="dropdown">
-        <button type="button" class="btn btn-default" id="selectDown" aria-label="下拉列表" data-toggle="dropdown">
+    <header class="header row">
+      <!-- <div class="dropdown"> -->
+        <!-- <button type="button" class="btn btn-default" id="selectDown" aria-label="下拉列表" data-toggle="dropdown">
           <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="selectDown">
@@ -70,54 +74,73 @@
           <li>text1</li>
           <li>text1</li>
           <li>text1</li>
-        </ul>
-        <div class="operateBox">
-          <span class="glyphicon glyphicon-search marginIcon" aria-hidden="true"></span>
-          <span class="glyphicon glyphicon-tag marginIcon" aria-hidden="true"></span>
-          <!-- <span class="glyphicon glyphicon-th-list img-circle" aria-hidden="true"></span> -->
-          <img src="../images/food.jpg" alt="头像" class="img-circle userPhoto">
+        </ul> -->
+        <div class="dropdownMenuBox col">
+          <div class="dropdown">
+            <button class="btn btn-default" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="oi oi-menu" title="icon name" aria-hidden="true"></span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="operateBox col">
+          <span class="oi oi-magnifying-glass marginIcon" aria-hidden="true"></span>
+          <span class="oi oi-list-rich marginIcon" aria-hidden="true"></span>
+          <!-- <span class="glyphicon glyphicon-tag marginIcon" aria-hidden="true"></span> -->
+          <img src="../images/food.jpg" alt="头像" class="rounded-circle userPhoto">
           <span class="userName">momo.zxy</span>
         </div>
-      </div>
+      <!-- </div> -->
     </header>
     <!-- 头部 end -->
     <div class="container-fluid">
       <!-- 面包屑导航 start -->
       <header>
-        <ol class="breadcrumb">
+        <!-- <ol class="breadcrumb">
           <li><a href="#">应用</a></li>
           <li class="active">应用详情</li>
-        </ol>
+        </ol> -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">应用</a></li>
+            <li class="breadcrumb-item active" aria-current="page">应用详情</li>
+          </ol>
+        </nav>
       </header>
       <!-- 面包屑导航 end -->
       <!-- 每个页面的主要内容 state -->
       <div class="panel">
         <header class="header">
-          <h4>应用信息</h4>
+          <h5 class="title">应用信息</h5>
         </header>
         <div class="field">
           <div class="row">
-            <div class="col-lg-3 col-md-5 col-sm-6 col-xs-12 keyValue">
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 keyValue">
               <span class="key">应用名称：</span>
               <span class="value">学尔思网校</span>
             </div>
-            <div class="col-lg-3 col-md-5 col-sm-6 col-xs-12 keyValue">
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 keyValue">
               <span class="key">应用ID：</span>
               <span class="value">20180001</span>
             </div>
-            <div class="col-lg-3 col-md-5 col-sm-6 col-xs-12 keyValue">
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 keyValue">
               <span class="key">创建时间：</span>
               <span class="value">2018年5月30日</span>
             </div>
-            <div class="col-lg-3 col-md-5 col-sm-6 col-xs-12 keyValue">
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 keyValue">
               <span class="key">域名：</span>
               <span class="value">www.xueersi.com</span>
             </div>
-            <div class="col-lg-3 col-md-5 col-sm-6 col-xs-12 keyValue">
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 keyValue">
               <span class="key">仓库地址：</span>
               <span class="value">git@xueersi.com/fabu.git</span>
             </div>
-            <div class="col-lg-3 col-md-5 col-sm-6 col-xs-12 keyValue">
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 keyValue">
               <span class="key">应用Key：</span>
               <span class="value">sada2312dfsdf</span>
             </div>

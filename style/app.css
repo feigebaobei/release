@@ -23,6 +23,11 @@
   display: inline-block;
   width: 240px;
 }
+.card .appContentBox .describe {
+  color: #999;
+  font-size: 14px;
+  line-height: 22px;
+}
 .card .appContentBox .wait {
   color: #428bca; /* 采用bootstrap的标准色 */
 }

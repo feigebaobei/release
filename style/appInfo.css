@@ -1,12 +1,20 @@
+.panel {
+  background: #fff;
+}
 .panel .header {
   border-bottom: 1px solid #eee;
-  padding: 5px 15px;
+  padding: 15px 25px;
+}
+.panel .header .title {
+  margin: 0;
 }
 .panel .field {
   padding: 10px 15px;
 }
 .panel .field .row {
   margin: 0 0 15px 0;
+  font-size: 14px;
+  color: #234;
 }
 .panel .field .row .keyValue {
   margin: 12px 0;
