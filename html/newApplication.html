@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="../style/bootstrap.4.0.css">
   <link rel="stylesheet" href="../style/common.css">
   <link rel="stylesheet" type="text/css" href="../style/newApplication.css">
+  <link rel="stylesheet" type="text/css" href="../style/filter-man-tree.css">
   <script src="../script/jquery.min.js"></script>
   <script src="../script/popper.1.12.9.js"></script>
   <script src="../script/bootstrap.4.0.js"></script>
@@ -97,16 +98,16 @@
           <label for="basic-url">域名：</label>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon3">http:/</span>
+              <span class="input-group-text" id="basic-addon1">http:/</span>
             </div>
-            <input type="text" class="form-control" id="basic-url" placeholder="请输入" aria-describedby="basic-addon3">
+            <input type="text" class="form-control" id="basic-url" placeholder="请输入" aria-describedby="basic-addon1">
           </div>
           <label for="basic-url">仓库地址</label>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon3">SSH:/</span>
+              <span class="input-group-text" id="basic-addon2">SSH:/</span>
             </div>
-            <input type="text" class="form-control" id="basic-url" placeholder="请输入" aria-describedby="basic-addon3">
+            <input type="text" class="form-control" id="basic-url" placeholder="请输入" aria-describedby="basic-addon2">
           </div>
           <label for="basic-url">Wiki地址</label>
           <div class="input-group mb-3">
@@ -135,16 +136,27 @@
               <option>Cake</option>
             </select>
           </div>
-          <!--<div class="form-group">
+          
+
+
+
+
+          <div class="form-group">
             <label for="Approver">应用角色:</label>
               <div class="Approver_col">
                 <div class="Approver_row">
                   <img src="../images/food.jpg">
                 </div>
-                <div class="Approver_row add" id="addProduct" data-toggle="modal" data-target="#addProductCenter">
+                <!-- <div class="Approver_row add CA_list" id="addProduct" data-toggle="modal" data-target="#addProductCenter">
+                  <span class="add1">+</span>
+                  <span class="add2">添加产品</span>
+                </div> -->
+                <!-- li test start -->
+                <div class="Approver_row add CA_list" id="addProduct">
                   <span class="add1">+</span>
                   <span class="add2">添加产品</span>
                 </div>
+                <!-- li test end -->
 
                 <div class="modal fade" id="addProductCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -250,9 +262,14 @@
                   </div>
                 </div>
               </div>
-           </div>-->
+           </div>
 
 
+
+
+
+
+                    <label for="Approver">应用角色:</label>
                     <div class="send_person">
                         <div class="apply_item_tit">审批人</div>
                         <div class="selected_person_model" style="border-bottom: none">
@@ -266,6 +283,7 @@
                             </ul>
                         </div>
                     </div>
+
 
         </form>
       </div>

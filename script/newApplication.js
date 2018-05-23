@@ -40,6 +40,21 @@ $(document).ready(function () {
             alert('应用描述不能为空');
             return;
         };
+        var basicAddon1 = $('#basic-addon1').val().trim();
+        if (online == '') {
+            alert('应用描述不能为空');
+            return;
+        };
+        var basicAddon2 = $('#basic-addon2').val().trim();
+        if (online == '') {
+            alert('应用描述不能为空');
+            return;
+        };
+        var basicAddon3 = $('#basic-addon3').val().trim();
+        if (online == '') {
+            alert('应用描述不能为空');
+            return;
+        };
         // if (tag_version.indexOf('v') == -1) {
         //     alert('tag版本不符合规范');
         //     return;
@@ -74,19 +89,47 @@ $(document).ready(function () {
 
 
 
-    // ops.textareaClickInit("#online_tag","#tag_version");
-    $('body').on('click', '.add_person_icon' , function () {
-        var groupName = '';
-        groupKey = '';
-        var parentUl = $(this).parent();
-        var groupArr = {'PM':'pm','PG':'tech', 'TT':'test','SE':'yunwei','DA':'data' ,'CC_list':'all','CA_list':'all'};//产品，技术，测试，抄送
-        for(var key in groupArr) {
-            if (parentUl.hasClass(key)) {
-                groupKey = key;
-                groupName = groupArr[key];
-                break;
-            };
+
+
+    $('body').on('click', '#addProduct', function () {
+      // console.log('addProduct')
+      var groupName = ''
+      var groupKey = ''
+      var target = $(this)
+      var groupArr = {'PM':'pm','PG':'tech', 'TT':'test','SE':'yunwei','DA':'data' ,'CC_list':'all','CA_list':'all'} //产品，技术，测试，抄送
+      // console.log(target)
+      for (var key in groupArr) {
+        if (target.hasClass(key)) {
+          groupKey = key
+          groupName = groupArr[key]
+          break
         }
+      }
+      var res = [{"text":"\u4ea7\u54c1\u90e8","nodes":[{"tags":["85"],"text":"UED\u7ec4"},{"tags":["86"],"text":"\u5b66\u4e60\u4ea7\u54c1\u7ec4"},{"tags":["88"],"text":"\u7528\u6237\u7814\u7a76\u7ec4"}]},{"text":"\u6280\u672f\u7814\u53d1\u90e8","nodes":[{"tags":["24"],"text":"\u524d\u7aef\u9879\u76ee\u7ec4"},{"tags":["26"],"text":"\u8fd0\u7ef4\u7ec4"},{"tags":["27"],"text":"\u6d4b\u8bd5\u9879\u76ee\u7ec4"},{"tags":["35"],"text":"\u8fd0\u8425\u9879\u76ee\u7ec4"},{"tags":["56"],"text":"\u4e2d\u53f0\u9879\u76ee\u7ec4"},{"tags":["57"],"text":"\u6570\u636e\u6316\u6398\u7ec4"},{"tags":["58"],"text":"\u7406\u79d1\u6559\u5b66\u9879\u76ee\u7ec4"},{"tags":["59"],"text":"\u670d\u52a1\u9879\u76ee\u7ec4"},{"tags":["60"],"text":"\u6587\u79d1\u6559\u5b66\u9879\u76ee\u7ec4"},{"tags":["62"],"text":"\u5e73\u53f0\u67b6\u6784\u7ec4"},{"tags":["63"],"text":"\u57fa\u7840\u67b6\u6784\u7ec4"},{"tags":["68"],"text":"\u667a\u80fd\u6559\u5b66\u7ec4"},{"tags":["203"],"text":"12"},{"tags":["206"],"text":"\u7a7a\u683c"},{"tags":["207"],"text":"\u6d4b\u8bd5"},{"tags":["209"],"text":"stest001"},{"tags":["210"],"text":"stest002"}]}]
+      $('.' + groupKey).personTree({
+        treeStruct: res,
+        selePerson: formatUsername($('.' + groupKey))
+      })
+    }) 
+
+
+
+
+
+
+    // ops.textareaClickInit("#online_tag","#tag_version");
+    // $('body').on('click', '.add_person_icon' , function () {
+    //     var groupName = '';
+    //     groupKey = '';
+    //     var parentUl = $(this).parent();
+    //     var groupArr = {'PM':'pm','PG':'tech', 'TT':'test','SE':'yunwei','DA':'data' ,'CC_list':'all','CA_list':'all'};//产品，技术，测试，抄送
+    //     for(var key in groupArr) {
+    //         if (parentUl.hasClass(key)) {
+    //             groupKey = key;
+    //             groupName = groupArr[key];
+    //             break;
+    //         };
+    //     }
         //把已经选中的人员传给选择窗
         // var seleArr = [];
         // for (var i = 0; i < $("."+groupKey).find('li').length - 1; i ++) {
@@ -96,13 +139,13 @@ $(document).ready(function () {
         //     seleArr.push([color,name_c,name_e]);
         // }
         
-        var res = [{"text":"\u4ea7\u54c1\u90e8","nodes":[{"tags":["85"],"text":"UED\u7ec4"},{"tags":["86"],"text":"\u5b66\u4e60\u4ea7\u54c1\u7ec4"},{"tags":["88"],"text":"\u7528\u6237\u7814\u7a76\u7ec4"}]},{"text":"\u6280\u672f\u7814\u53d1\u90e8","nodes":[{"tags":["24"],"text":"\u524d\u7aef\u9879\u76ee\u7ec4"},{"tags":["26"],"text":"\u8fd0\u7ef4\u7ec4"},{"tags":["27"],"text":"\u6d4b\u8bd5\u9879\u76ee\u7ec4"},{"tags":["35"],"text":"\u8fd0\u8425\u9879\u76ee\u7ec4"},{"tags":["56"],"text":"\u4e2d\u53f0\u9879\u76ee\u7ec4"},{"tags":["57"],"text":"\u6570\u636e\u6316\u6398\u7ec4"},{"tags":["58"],"text":"\u7406\u79d1\u6559\u5b66\u9879\u76ee\u7ec4"},{"tags":["59"],"text":"\u670d\u52a1\u9879\u76ee\u7ec4"},{"tags":["60"],"text":"\u6587\u79d1\u6559\u5b66\u9879\u76ee\u7ec4"},{"tags":["62"],"text":"\u5e73\u53f0\u67b6\u6784\u7ec4"},{"tags":["63"],"text":"\u57fa\u7840\u67b6\u6784\u7ec4"},{"tags":["68"],"text":"\u667a\u80fd\u6559\u5b66\u7ec4"},{"tags":["203"],"text":"12"},{"tags":["206"],"text":"\u7a7a\u683c"},{"tags":["207"],"text":"\u6d4b\u8bd5"},{"tags":["209"],"text":"stest001"},{"tags":["210"],"text":"stest002"}]}]
-        $("."+groupKey).personTree({
-            treeStruct: res,
-            selePerson: formatUsername($("."+groupKey))
-        });
+        // var res = [{"text":"\u4ea7\u54c1\u90e8","nodes":[{"tags":["85"],"text":"UED\u7ec4"},{"tags":["86"],"text":"\u5b66\u4e60\u4ea7\u54c1\u7ec4"},{"tags":["88"],"text":"\u7528\u6237\u7814\u7a76\u7ec4"}]},{"text":"\u6280\u672f\u7814\u53d1\u90e8","nodes":[{"tags":["24"],"text":"\u524d\u7aef\u9879\u76ee\u7ec4"},{"tags":["26"],"text":"\u8fd0\u7ef4\u7ec4"},{"tags":["27"],"text":"\u6d4b\u8bd5\u9879\u76ee\u7ec4"},{"tags":["35"],"text":"\u8fd0\u8425\u9879\u76ee\u7ec4"},{"tags":["56"],"text":"\u4e2d\u53f0\u9879\u76ee\u7ec4"},{"tags":["57"],"text":"\u6570\u636e\u6316\u6398\u7ec4"},{"tags":["58"],"text":"\u7406\u79d1\u6559\u5b66\u9879\u76ee\u7ec4"},{"tags":["59"],"text":"\u670d\u52a1\u9879\u76ee\u7ec4"},{"tags":["60"],"text":"\u6587\u79d1\u6559\u5b66\u9879\u76ee\u7ec4"},{"tags":["62"],"text":"\u5e73\u53f0\u67b6\u6784\u7ec4"},{"tags":["63"],"text":"\u57fa\u7840\u67b6\u6784\u7ec4"},{"tags":["68"],"text":"\u667a\u80fd\u6559\u5b66\u7ec4"},{"tags":["203"],"text":"12"},{"tags":["206"],"text":"\u7a7a\u683c"},{"tags":["207"],"text":"\u6d4b\u8bd5"},{"tags":["209"],"text":"stest001"},{"tags":["210"],"text":"stest002"}]}]
+        // $("."+groupKey).personTree({
+        //     treeStruct: res,
+        //     selePerson: formatUsername($("."+groupKey))
+        // });
 
-    });
+    // });
 
 
 
