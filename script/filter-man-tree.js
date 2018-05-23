@@ -56,7 +56,7 @@
 			var treeStructure = me.options.treeStruct;
 			content += '<div class="cancel_mask" style="display:block;">'
 							+'<div class="select_person_box">'
-								+'<span class="closeBtn"><img src="../images/food.jpg"></span>'
+								+'<span class="closeBtn"><img src="../images/close_white.png"></span>'
 								+'<div class="select_tit">选人</div>'
 								+'<div class="person_area">'
 									+'<div class="group_list">'
@@ -154,7 +154,7 @@
                     + '<i class="name_icon">'+ res.data[i].realname.substring(res.data[i].realname.length-2, res.data[i].realname.length) +'</i>'
                     +'</span>'
                     +'<span class="right_icon">'
-                    +'<img src="../images/food.jpg>'
+                    +'<img src="../images/close_white.png>'
                     +'</span>'
                     +'<div class="name_area">'
                     +'<p class="name name_chinese">'+ res.data[i].realname +'</p>'
