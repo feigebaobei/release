@@ -1,0 +1,251 @@
+
+/*弹窗部分*/
+.img_mask,
+.cancel_mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0,0,0,0.7);
+}
+.cancel_mask .closeBtn {
+  display: inline-block;
+  width: 15px;
+  height: 16px;
+  line-height: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+/*选择处理人弹窗*/
+.select_person_box {
+  position: absolute;
+  width: 700px;
+  height: 550px;
+  top: 50%;
+  left: 50%;
+  margin-top: -275px;
+  margin-left: -350px;
+  background-color: #fafafc;
+}
+.select_person_box .select_tit {
+  color: #fff;
+  line-height: 46px;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+  background-color: #3c8be7;
+}
+.select_person_box .search_name {
+  position: absolute;
+  top: 9px;
+  left: 8px;
+  width: 200px;
+}
+.select_person_box .search_name .search_name_input {
+  width: 100%;
+  height: 28px;
+  outline: none; 
+  resize : none;
+  border: none;
+  border-radius: 2px;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+.select_person_box .search_name #search_name_result {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 300px;
+  margin-top: 3px;
+  z-index: 99;
+  border-radius: 2px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.person_area {
+  height: 444px;
+  padding: 10px;
+}
+.group_list,
+.man_list,
+.selected_man {
+  float: left;
+  height: 420px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.group_list {/*网校部门信息*/
+  overflow: auto;
+  width: 220px;
+  margin-right: 10px;
+}
+.man_list {
+  width: 220px;
+  margin-right: 10px;
+}
+.man_list .man_info {
+  overflow: auto;
+  height: 390px;
+  padding: 5px;
+}
+.man_info li,
+.selected_man_info li {
+  /*height: 44px;
+  line-height: 44px;*/
+  position: relative;
+  overflow: hidden;
+}
+.man_info li a {
+  display: inline-block;
+  width: 100%;
+}
+.selected_man_info li a {
+  display: inline-block;
+  width: 86%;
+}
+.selected_man_info  .del_selected_man {
+  cursor: pointer;
+  width: 20px;
+  margin-top: 12px;
+}
+.name_icon {
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  color: #fff;
+  line-height: 44px;
+}
+.avator {
+  float: left;
+  width: 34px;
+  height: 34px;
+  margin: 5px;
+  border-radius: 50%;
+}
+.selected_person li .avator {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.man_info li .right_icon,
+.selected_man_info li .right_icon {
+  position: absolute;
+  display: none;
+  width: 34px;
+  height: 34px;
+  top: 5px;
+  left: 5px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 50%;
+}
+.man_info li .right_icon img {
+  position: absolute;
+  top: 11px;
+  left: 9px;
+  width: 16px;
+}
+.man_info li.selected .right_icon {
+  display: block;
+}
+.man_info li .name_area,
+.selected_man_info li .name_area{
+  /*height: 40px;*/
+  padding-top: 6px;
+  padding-left: 42px;
+}
+.man_info li .name,
+.selected_man_info li .name{
+  /*margin-top: 10px;*/
+  font-size: 13px;
+  line-height: 16px;
+  margin-left: 5px;
+}
+.man_info li .name_email,
+.selected_man_info li .name_email {
+  font-size: 12px;
+  word-break: break-all;
+}
+.man_info li.selected .name,
+.selected_man_info li.selected .name{
+  color: #888;
+}
+.selected_man {
+  overflow: auto;
+  width: 220px;
+}
+.selected_man ul {
+  padding: 5px;
+}
+.selected_man ul li a {
+  float: right;
+  display: inline-block;
+  margin-left: 5px;
+}
+.selected_man ul li .dele {
+  width: 10px;
+  margin-bottom: 2px;
+}
+.select_person_tit {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+.select_person_tit input {
+  margin-right: 5px;
+}
+.sure_add {
+  height: 59px;
+  padding: 11px 270px;
+  background-color: #fff;
+}
+.sure_add button {
+  width: 160px;
+  height: 36px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: #3c8be7;
+}
+.badge {
+  display: none;
+}
+
+/*添加之后*/
+.issue_info .selected_person {
+  overflow: hidden;
+  width: 96%;
+  float: right;
+}
+.selected_person li {
+  float: left;
+  width: 50px;
+  margin: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+.add_person_icon span {
+  color: #999;
+}
+.selected_person .add_icon {
+  width: 34px;
+  margin: 5px 8px;
+}
+.issue_info .selected_person .name_c {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: #758697;
+}
+.selected_person .name_e {
+  display: none;
+}
+
