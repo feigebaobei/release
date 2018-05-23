@@ -96,3 +96,8 @@
         padding: 24px 0 30px 50px;
         border-top: 1px solid #B4BCCC;
       }
+
+      .dropdown {
+        background: #fff;
+        padding: 10px 36px;
+      }

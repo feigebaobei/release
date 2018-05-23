@@ -9,7 +9,7 @@
   <script src="../script/jquery.min.js"></script>
   <script src="../script/popper.1.12.9.js"></script>
   <script src="../script/bootstrap.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
   <script type="text/javascript">
     let formObj = {
       str1: null,
@@ -73,6 +73,26 @@
   <!-- 导航部分 end -->
   <!-- 右边部分 start -->
   <div id="right">
+    <!-- 右侧头部 -->
+    <div class="dropdown">
+      <button type="button" class="btn btn-default" id="selectDown" aria-label="下拉列表" data-toggle="dropdown">
+        <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="selectDown">
+        <li>text1</li>
+        <li>text1</li>
+        <li>text1</li>
+        <li>text1</li>
+      </ul>
+      <div class="operateBox">
+        <span class="glyphicon glyphicon-search marginIcon" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-tag marginIcon" aria-hidden="true"></span>
+        <!-- <span class="glyphicon glyphicon-th-list img-circle" aria-hidden="true"></span> -->
+        <img src="../images/food.jpg" alt="头像" class="img-circle userPhoto">
+        <span class="userName">momo.zxy</span>
+      </div>
+    </div>
+    <!-- 右侧内容部分 -->
     <div class="navTitle">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
