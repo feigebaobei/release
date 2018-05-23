@@ -56,7 +56,7 @@
 			var treeStructure = me.options.treeStruct;
 			content += '<div class="cancel_mask" style="display:block;">'
 							+'<div class="select_person_box">'
-								+'<span class="closeBtn"><img src="/assets/images/close_white.png"></span>'
+								+'<span class="closeBtn"><img src="../images/food.jpg"></span>'
 								+'<div class="select_tit">选人</div>'
 								+'<div class="person_area">'
 									+'<div class="group_list">'
@@ -78,7 +78,7 @@
 			if (selePerson.length !== 0) {
 				for(var i = 0; i < selePerson[0].length; i ++){
 					content += '<li>'
-									+'<img src="/assets/images/del.png" class="del_selected_man">'
+									+'<img src="../images/food.jpg" class="del_selected_man">'
 									+'<a href="javascript:void(0);">'
 										+'<span style="background-color:'+ me.config.colorArr[$.inArray(selePerson[1][i].substring(0,1).toLowerCase(),me.config.letterArr)] +';display:inline-block;position:relative;" class="avator">'
 											+'<i class="name_icon">'+ selePerson[0][i].substring(selePerson[0][i].length-2, selePerson[0][i].length) +'</i>'
@@ -154,7 +154,7 @@
                     + '<i class="name_icon">'+ res.data[i].realname.substring(res.data[i].realname.length-2, res.data[i].realname.length) +'</i>'
                     +'</span>'
                     +'<span class="right_icon">'
-                    +'<img src="/assets/images/selected_icon.png">'
+                    +'<img src="../images/food.jpg>'
                     +'</span>'
                     +'<div class="name_area">'
                     +'<p class="name name_chinese">'+ res.data[i].realname +'</p>'
@@ -260,7 +260,7 @@
 				}else {
 					$(this).addClass('selected');
 					var tpl = '';
-					tpl += '<li><img src="/assets/images/del.png" class="del_selected_man">'
+					tpl += '<li><img src="../images/food.jpg" class="del_selected_man">'
 							+ $(this).html() +'</li>';
 					$('.selected_man ul').append(tpl);
 					//判断全选按钮状态
@@ -316,7 +316,7 @@
 				// seleTpl = seleTpl.substring(0, seleTpl.length - 1);
 				tpl += '<li class="add_person_icon">'
 							+'<a href="javascript:void(0);">'
-			    				+'<img src="/assets/images/add_icon.png" class="add_icon">'
+			    				+'<img src="../images/food.jpg" class="add_icon">'
 			    				+'<span>添加人</span>'
 			    			+'</a>'
 			    	   +'</li>';

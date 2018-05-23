@@ -10,6 +10,7 @@
   <script src="../script/popper.1.12.9.js"></script>
   <script src="../script/bootstrap.4.0.js"></script>
   <script type="text/javascript" src="../script/newApplication.js"></script>
+  <script type="text/javascript" src="../script/filter-man-tree.js"></script>
 </head>
 <body>
   <!-- 导航部分 start -->
@@ -133,7 +134,7 @@
               <option>Cake</option>
             </select>
           </div>
-          <div class="form-group">
+          <!--<div class="form-group">
             <label for="Approver">应用角色:</label>
               <div class="Approver_col">
                 <div class="Approver_row">
@@ -143,7 +144,7 @@
                   <span class="add1">+</span>
                   <span class="add2">添加产品</span>
                 </div>
-                <!-- Modal -->
+
                 <div class="modal fade" id="addProductCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -170,13 +171,13 @@
                   <span class="add1">+</span>
                   <span class="add2">添加研发</span>
                 </div>
-                <!-- Modal -->
+
                 <div class="modal fade" id="addresearchCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLongTitle">添加研发</h5>
-                        <!-- 关闭按钮 -->
+                        
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
@@ -198,13 +199,13 @@
                   <span class="add1">+</span>
                   <span class="add2">添加设计</span>
                 </div>
-                <!-- Modal -->
+
                 <div class="modal fade" id="addDesignCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLongTitle">添加设计</h5>
-                        <!-- 关闭按钮 -->
+                        
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
@@ -226,13 +227,13 @@
                   <span class="add1">+</span>
                   <span class="add2">添加测试</span>
                 </div>
-                <!-- Modal -->
+
                 <div class="modal fade" id="addtestCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLongTitle">添加测试</h5>
-                        <!-- 关闭按钮 -->
+                        
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
@@ -248,7 +249,23 @@
                   </div>
                 </div>
               </div>
-          </div>
+           </div>-->
+
+
+                    <div class="send_person">
+                        <div class="apply_item_tit">审批人</div>
+                        <div class="selected_person_model" style="border-bottom: none">
+                            <ul class="CA_list selected_person" style="width:100%;">
+                                <li class="add_person_icon">
+                                    <a href="javascript:void(0);">
+                                        <img src="../images/food.jpg" class="add_icon">
+                                        <span class="add">添加</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
         </form>
       </div>
       <div class="content_footer">
