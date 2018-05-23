@@ -3,6 +3,20 @@
 let formObj = {}
 $(document).ready(function () {
   $('#selectDown').dropdown()
+
+  $('.Approver_col .Approver_row').on('mousemove',function(){
+    console.log($(this)[0].children[1])
+    if($(this)[0].children[1]){
+      $(this)[0].children[1].style.display = ''
+    }
+  })
+
+  $('.Approver_col .Approver_row').on('mouseout',function(){
+    if($(this)[0].children[1]){
+      $(this)[0].children[1].style.display = 'none'
+    }
+  })
+
   //点击产品添加权限
   $("#addProduct").on('click',function(){
     console.log('addProduct')
