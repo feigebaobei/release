@@ -9,9 +9,15 @@
       #right {
         background: #e9ecef;
       }
+
+      #right .dropdown{
+        padding: 12px;
+        background: #fff;
+      }
       
       .navTitle {
-        padding: 8px 0 6px 50px;
+        font-size: 12px;
+        padding: 1px 0 1px 50px;
         background: #e9ecef;
       }
       
@@ -57,6 +63,7 @@
         background: #eee;
         border-radius: 50%;
         margin-left: 12px;
+        margin-right: 18px;
       }
       .Approver_col .Approver_row img {
         width: 100%;
@@ -67,7 +74,6 @@
       #add {
         width:100px;
         height:100px;
-        margin-left: 12px;
         border-radius: 0;
         border:1px dashed #999;
         position: relative;
