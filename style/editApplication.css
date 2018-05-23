@@ -64,6 +64,7 @@
         border-radius: 50%;
         margin-left: 12px;
         margin-right: 18px;
+        position: relative;
       }
       .Approver_col .Approver_row img {
         width: 100%;
@@ -76,7 +77,6 @@
         height:100px;
         border-radius: 0;
         border:1px dashed #999;
-        position: relative;
       }
 
       .add .add1 {
@@ -101,4 +101,27 @@
       .content .content_footer {
         padding: 24px 0 30px 50px;
         border-top: 1px solid #B4BCCC;
+      }
+
+      .Approver_row .deletebox{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .Approver_row div .delete {
+        width:80px;
+        height:24px;
+        text-align: center;
+        line-height: 24px;
+        border: 1px solid red;
+        border-radius: 6px;
+        background: #fff;
+        text-align: center;
+        color: red;
       }

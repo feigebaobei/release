@@ -5,11 +5,11 @@
   <title>发布上线系统-应用</title>
   <link rel="stylesheet" href="../style/bootstrap.4.0.css">
   <link rel="stylesheet" href="../style/common.css">
-  <link rel="stylesheet" type="text/css" href="../style/newApplication.css">
+  <link rel="stylesheet" type="text/css" href="../style/editApplication.css">
   <script src="../script/jquery.min.js"></script>
   <script src="../script/popper.1.12.9.js"></script>
   <script src="../script/bootstrap.4.0.js"></script>
-  <script type="text/javascript" src="../script/newApplication.js"></script>
+  <script type="text/javascript" src="../script/editApplication.js"></script>
 </head>
 <body>
   <!-- 导航部分 start -->
@@ -74,7 +74,7 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item active" aria-current="page">应用</li>
-          <li class="breadcrumb-item active" aria-current="page">新增应用</li>
+          <li class="breadcrumb-item active" aria-current="page">编辑应用</li>
         </ol>
       </nav>
     </div>
@@ -84,6 +84,7 @@
       </div>
       <div class="content_form">
         <form>
+          
           <div class="form-group">
             <label for="formGroupExampleInput">应用名称:</label>
             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="请输入仓库名称">
@@ -92,6 +93,7 @@
             <label for="online">应用描述:</label>
             <textarea class="form-control" id="online" placeholder="请输入备注" rows="3"></textarea>
           </div>
+
           <label for="basic-url">域名：</label>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -99,6 +101,7 @@
             </div>
             <input type="text" class="form-control" id="basic-url" placeholder="请输入" aria-describedby="basic-addon3">
           </div>
+
           <label for="basic-url">仓库地址</label>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -106,6 +109,7 @@
             </div>
             <input type="text" class="form-control" id="basic-url" placeholder="请输入" aria-describedby="basic-addon3">
           </div>
+
           <label for="basic-url">Wiki地址</label>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -113,6 +117,7 @@
             </div>
             <input type="text" class="form-control" id="basic-url" placeholder="请输入" aria-describedby="basic-addon3">
           </div>
+
           <label for="formGroupExampleInput">应用类型:</label>
           <div class="form-group">
             <div class="form-check form-check-inline">
@@ -124,6 +129,7 @@
               <label class="form-check-label" for="inlineRadio2">内部应用</label>
             </div>
           </div>
+
           <div class="form-group">
             <label for="name">应用框架类型:</label>
             <select class="form-control" id="name">
@@ -133,11 +139,15 @@
               <option>Cake</option>
             </select>
           </div>
+
           <div class="form-group">
             <label for="Approver">应用角色:</label>
               <div class="Approver_col">
                 <div class="Approver_row">
                   <img src="../images/food.jpg">
+                  <div class="deletebox">
+                    <div class="delete">删除</div>
+                  </div>
                 </div>
                 <div class="Approver_row add" id="addProduct" data-toggle="modal" data-target="#addProductCenter">
                   <span class="add1">+</span>
