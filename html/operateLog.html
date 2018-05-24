@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>发布上线系统-操作日志</title>
+  <!-- <link rel="stylesheet" href="../style/bootstrap.css"> -->
+  <link rel="stylesheet" href="../style/bootstrap.4.0.css">
+  <!-- <link rel="stylesheet" href="../style/bootstrap.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-iconic@1.1.1/font/css/open-iconic-bootstrap.css">
+  <link rel="stylesheet" href="../style/common.css">
+  <!-- 每个页面相应的样式 start -->
+  <link rel="stylesheet" href="../style/app.css">
+  <!-- 每个页面相应的样式 end -->
+  <script src="../script/jquery.min.js"></script>
+  <!-- <script src="../script/popper.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js"></script> -->
+  <!-- <script src="https://cdn.bootcss.com/popper.js/1.12.9/popper.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+  <script src="../script/popper.1.12.9.js"></script>
+  <script src="../script/bootstrap.js"></script>
+  <script>
+    $(document).ready(function () {
+      console.log(2)
+    })
+  </script>
+</head>
+<body>
+  
+  <!-- 导航部分 start -->
+  <nav id="left">
+    <header>
+      <img src="../images/mountain.jpg" alt="系统图标" class="systomLogo">
+      <span>AntDesign</span>
+    </header>
+    <ul class="navList">
+      <a href="#">
+        <li class="active">
+          <span class="glyphicon glyphicon-cog"></span>
+          <span>应用</span>
+        </li>
+      </a>
+      <a href="#">
+      <li>
+        <span class="glyphicon glyphicon-edit"></span>
+        <span>测试发布</span>
+      </li>
+      </a>
+      <li>
+        <span class="glyphicon glyphicon-calendar"></span>
+        <span>上线发布</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-list-alt"></span>
+        <span>工作台</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-ok-sign"></span>
+        <span>操作日志</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-list-alt"></span>
+        <span>问题反馈&使用帮助</span>
+      </li>
+    </ul>
+  </nav>
+  <!-- 导航部分 end -->
+  <!-- 右边部分 start -->
+  <div id="right">
+    <!-- 头部 start -->
+    <header class="header row">
+        <div class="dropdownMenuBox col">
+          <div class="dropdown">
+            <button class="btn btn-default" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="oi oi-menu" title="icon name" aria-hidden="true"></span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="operateBox col">
+          <span class="oi oi-magnifying-glass marginIcon" aria-hidden="true"></span>
+          <span class="oi oi-list-rich marginIcon" aria-hidden="true"></span>
+          <img src="../images/food.jpg" alt="头像" class="rounded-circle userPhoto">
+          <span class="userName">momo.zxy</span>
+        </div>
+      <!-- </div> -->
+    </header>
+    <!-- 头部 end -->
+    <div class="container-fluid">
+      <!-- 面包屑导航 start -->
+      <header>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">应用</a></li>
+            <li class="breadcrumb-item active" aria-current="page">应用详情</li>
+          </ol>
+        </nav>
+      </header>
+      <!-- 面包屑导航 end -->
+      <!-- 每个页面的主要内容 state -->
+      
+      <!-- 每个页面的主要内容 end -->
+    </div>
+  </div>
+  <!-- 右边部分 end -->
+</body>
+</html>
