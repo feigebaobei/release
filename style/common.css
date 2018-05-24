@@ -78,6 +78,9 @@ a:hover {
   height: 50px;
   padding: 8px 15px;
 }
+#right > .header > .dropdownMenuBox > .dropdown {
+  margin: 7px 0;
+}
 #right .operateBox {
   float: right;
   text-align: right;
