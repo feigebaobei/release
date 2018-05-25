@@ -97,28 +97,26 @@
   <div id="right">
     <!-- 头部 start -->
     <header class="header row">
-        <div class="dropdownMenuBox col-sm-6">
-          <!-- 这是bootstrap3的下拉列表 end -->
-          <div class="dropdown">
-            <span class="oi oi-menu dropdown-toggle" title="菜单" aria-hidden="true" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></span>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
-          </div>
-          <!-- 这是bootstrap3的下拉列表 end -->
+      <div class="dropdownMenuBox col-sm-6">
+        <!-- 这是bootstrap3的下拉列表 end -->
+        <div class="dropdown">
+          <span class="oi oi-menu dropdown-toggle" title="菜单" aria-hidden="true" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></span>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
         </div>
-
-        <div class="operateBox col-sm-6">
-          <span class="oi oi-magnifying-glass marginIcon" aria-hidden="true"></span>
-          <span class="oi oi-list-rich marginIcon" aria-hidden="true"></span>
-          <img src="../images/food.jpg" alt="头像" class="rounded-circle userPhoto">
-          <span class="userName">momo.zxy</span>
-        </div>
-      <!-- </div> -->
+        <!-- 这是bootstrap3的下拉列表 end -->
+      </div>
+      <div class="operateBox col-sm-6">
+        <span class="oi oi-magnifying-glass marginIcon" aria-hidden="true"></span>
+        <span class="oi oi-list-rich marginIcon" aria-hidden="true"></span>
+        <img src="../images/food.jpg" alt="头像" class="rounded-circle userPhoto">
+        <span class="userName">momo.zxy</span>
+      </div>
     </header>
     <!-- 头部 end -->
     <div class="container-fluid">
@@ -199,33 +197,26 @@
         </div>
       </div>
       <!-- 发布记录 end -->
-          <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-            <div class="modal-dialog modal-sm" role="document">
-              <div class="modal-content">
-                ...
-              </div>
+      <!-- Modal start -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">提示</h4>
+            </div>
+            <div class="modal-body">
+              <p>发布成功！</p>
+            </div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button> -->
+              <button type="button" class="btn btn-primary" data-dismiss="modal">知道了</button>
             </div>
           </div>
-          <!-- Modal start -->
-          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="myModalLabel">提示</h4>
-                </div>
-                <div class="modal-body">
-                  <p>发布成功！</p>
-                </div>
-                <div class="modal-footer">
-                  <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button> -->
-                  <button type="button" class="btn btn-primary" data-dismiss="modal">知道了</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Modal end -->
+        </div>
+      </div>
+      <!-- Modal end -->
       <!-- 每个页面的主要内容 end -->
     </div>
   </div>
