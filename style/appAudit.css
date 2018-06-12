@@ -1,0 +1,54 @@
+.panel {
+  background: #fff;
+}
+.panel .header {
+  border-bottom: 1px solid #eee;
+  padding: 15px 25px;
+}
+.panel .header .title {
+  margin: 0;
+}
+.panel .field {
+  padding: 10px 15px;
+}
+.panel .field .row {
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  color: #234;
+}
+.panel .field .row .keyValue {
+  margin: 12px 0;
+}
+.panel .field .row .keyValue .key {
+  width: 100px;
+  display: inline-block;
+  vertical-align: top;
+}
+.panel .field .row .keyValue .value {
+  width: calc(100% - 105px);
+  display: inline-block;
+  vertical-align: top;
+}
+.panel .field .row .keyValue .value .badgeRole {
+  position: relative;
+  display: inline-block;
+  margin: 0 15px 0 0;
+}
+.panel .field .row .keyValue .value .badgeRole .photo {
+  width: 40px;
+  height: 40px;
+}
+.panel .field .row .keyValue .value .badgeRole .role {
+  width: 20px;
+  height: 20px;
+  padding: 0 0 0 3px;
+  background: #fff;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: 1px solid #ddd;
+}
+.panel .field .row .keyValue .value .badgeRole .userName {
+  text-align: center;
+  margin: 5px 0 10px 0;
+}

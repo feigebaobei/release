@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>发布上线系统-工作台</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.css">
+  <!-- <link rel="stylesheet" href="../style/bootstrap.4.0.css"> -->
+  <!-- <link rel="stylesheet" href="../style/bootstrap.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-iconic@1.1.1/font/css/open-iconic-bootstrap.css">
+  <link rel="stylesheet" href="../style/bootstrap-table.css">
+  <link rel="stylesheet" href="../style/common.css">
+  <!-- 每个页面相应的样式 start -->
+  <link rel="stylesheet" href="../style/workbench.css">
+  <!-- 每个页面相应的样式 end -->
+  <script src="../script/jquery.min.js"></script>
+  <script src="../script/popper.1.12.9.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.12.1/src/bootstrap-table.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.12.1/dist/locale/bootstrap-table-zh-CN.js"></script>
+  <script>
+    $(document).ready(function () {
+      console.log(2)
+      $('#appAuditTable').bootstrapTable({
+        ajax: 'url',
+        search: true,
+        searchAlign: 'left',
+        columns: [
+          {
+            field: 'id',
+            title: '应用ID'
+          },
+          {
+            field: 'id',
+            title: '应用名称'
+          },
+          {
+            field: 'id',
+            title: '创建人'
+          },
+          {
+            field: 'id',
+            title: '域名'
+          },
+          {
+            field: 'id',
+            title: '仓库地址'
+          },
+          {
+            field: 'id',
+            title: '创建时间'
+          },
+          {
+            field: 'id',
+            title: '状态'
+          },
+          {
+            field: 'id',
+            title: '操作'
+          }
+        ]
+      })
+    })
+  </script>
+</head>
+<body>
+  
+  <!-- 导航部分 start -->
+  <nav id="left">
+    <header>
+      <img src="../images/mountain.jpg" alt="系统图标" class="systomLogo">
+      <span>AntDesign</span>
+    </header>
+    <ul class="navList">
+      <a href="#">
+        <li class="active">
+          <span class="glyphicon glyphicon-cog"></span>
+          <span>应用</span>
+        </li>
+      </a>
+      <a href="#">
+      <li>
+        <span class="glyphicon glyphicon-edit"></span>
+        <span>测试发布</span>
+      </li>
+      </a>
+      <li>
+        <span class="glyphicon glyphicon-calendar"></span>
+        <span>上线发布</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-list-alt"></span>
+        <span>工作台</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-ok-sign"></span>
+        <span>操作日志</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-list-alt"></span>
+        <span>问题反馈&使用帮助</span>
+      </li>
+    </ul>
+  </nav>
+  <!-- 导航部分 end -->
+  <!-- 右边部分 start -->
+  <div id="right">
+    <!-- 头部 start -->
+    <header class="header row">
+      <!-- 这是bootstrap3的样式相符合的html end -->
+      <div class="dropdownMenuBox col-sm-6">
+        <div class="dropdown">
+          <span class="oi oi-menu dropdown-toggle" title="菜单" aria-hidden="true" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></span>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="operateBox col-sm-6">
+        <span class="oi oi-magnifying-glass marginIcon" aria-hidden="true"></span>
+        <span class="oi oi-list-rich marginIcon" aria-hidden="true"></span>
+        <img src="../images/food.jpg" alt="头像" class="rounded-circle userPhoto">
+        <span class="userName">momo.zxy</span>
+      </div>
+      <!-- 这是bootstrap3的样式相符合的html end -->
+    </header>
+    <!-- 头部 end -->
+    <div class="container-fluid">
+      <!-- 面包屑导航 start -->
+      <header>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <!-- <li class="breadcrumb-item"><a href="#">应用</a></li> -->
+            <li class="breadcrumb-item active" aria-current="page">工作台</li>
+          </ol>
+        </nav>
+      </header>
+      <!-- 面包屑导航 end -->
+      <!-- 每个页面的主要内容 state -->
+        <!-- 工作台的3个选项卡 start -->
+        <div class="tabs">
+          <ul id="tab" class="nav nav-tabs">
+            <li class="active">
+              <a href="#appAudit" data-toggle="tab">
+                 应用审核
+                 <span>(3)</span>
+              </a>
+            </li>
+            <li>
+              <a href="#updataAudit" data-toggle="tab">
+                上线审核
+                 <span>(16)</span>
+              </a>
+            </li>
+            <li>
+              <a href="#cppyToMe" data-toggle="tab">
+                抄送我的
+                 <span>(64)</span>
+              </a>
+            </li>
+          </ul>
+          <div id="tabContent" class="tab-content">
+            <div class="tab-pane fade in active" id="appAudit">
+              <table id="appAuditTable"></table>
+            </div>
+            <div class="tab-pane fade" id="updataAudit">
+              <p>中华民族是崇尚英雄、成就英雄、英雄辈出的民族，和平年代同样需要英雄情怀。”英雄精神就是我们的民族精神，它是激励我们实现中华民族伟大复兴的磅礴力量。</p>
+            </div>
+            <div class="tab-pane fade" id="cppyToMe">
+              <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple 
+                TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。</p>
+            </div>
+          </div>
+        </div>
+        <!-- 工作台的3个选项卡 end -->
+      <!-- 每个页面的主要内容 end -->
+    </div>
+  </div>
+  <!-- 右边部分 end -->
+</body>
+</html>

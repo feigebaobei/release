@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>发布上线系统-工作台</title>
+  <link rel="stylesheet" href="../style/bootstrap.css">
+  <!-- <link rel="stylesheet" href="../style/bootstrap.4.0.css"> -->
+  <!-- <link rel="stylesheet" href="../style/bootstrap.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-iconic@1.1.1/font/css/open-iconic-bootstrap.css">
+  <link rel="stylesheet" href="../style/common.css">
+  <!-- 每个页面相应的样式 start -->
+  <link rel="stylesheet" href="../style/onlineAudit.css">
+  <!-- 每个页面相应的样式 end -->
+  <script src="../script/jquery.min.js"></script>
+  <!-- <script src="../script/popper.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js"></script> -->
+  <!-- <script src="https://cdn.bootcss.com/popper.js/1.12.9/popper.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+  <script src="../script/popper.1.12.9.js"></script>
+  <script src="../script/bootstrap.js"></script>
+  <script>
+    $(document).ready(function () {
+      console.log(2)
+      $('#pass').on('click', function () {
+        // 通过
+      })
+      $('#reject').on('click', function () {
+        // 拒绝
+      })
+    })
+  </script>
+</head>
+<body>
+  
+  <!-- 导航部分 start -->
+  <nav id="left">
+    <header>
+      <img src="../images/mountain.jpg" alt="系统图标" class="systomLogo">
+      <span>AntDesign</span>
+    </header>
+    <ul class="navList">
+      <a href="#">
+        <li class="active">
+          <span class="glyphicon glyphicon-cog"></span>
+          <span>应用</span>
+        </li>
+      </a>
+      <a href="#">
+      <li>
+        <span class="glyphicon glyphicon-edit"></span>
+        <span>测试发布</span>
+      </li>
+      </a>
+      <li>
+        <span class="glyphicon glyphicon-calendar"></span>
+        <span>上线发布</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-list-alt"></span>
+        <span>工作台</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-ok-sign"></span>
+        <span>操作日志</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-list-alt"></span>
+        <span>问题反馈&使用帮助</span>
+      </li>
+    </ul>
+  </nav>
+  <!-- 导航部分 end -->
+  <!-- 右边部分 start -->
+  <div id="right">
+    <!-- 头部 start -->
+    <header class="header row">
+      <!-- 这是bootstrap3的样式相符合的html end -->
+      <div class="dropdownMenuBox col-sm-6">
+        <div class="dropdown">
+          <span class="oi oi-menu dropdown-toggle" title="菜单" aria-hidden="true" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></span>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="operateBox col-sm-6">
+        <span class="oi oi-magnifying-glass marginIcon" aria-hidden="true"></span>
+        <span class="oi oi-list-rich marginIcon" aria-hidden="true"></span>
+        <img src="../images/food.jpg" alt="头像" class="img-circle userPhoto">
+        <span class="userName">momo.zxy</span>
+      </div>
+      <!-- 这是bootstrap3的样式相符合的html end -->
+    </header>
+    <!-- 头部 end -->
+    <div class="container-fluid">
+      <!-- 面包屑导航 start -->
+      <header>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">工作台</a></li>
+            <li class="breadcrumb-item active" aria-current="page">上线审核</li>
+          </ol>
+        </nav>
+      </header>
+      <!-- 面包屑导航 end -->
+      <!-- 每个页面的主要内容 state -->
+      <!-- 应用信息 start -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">应用信息</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row field">
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 keyValue">
+              <span class="key">应用名称：</span>
+              <span class="value">学而思网校</span>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 keyValue">
+              <span class="key">应用ID：</span>
+              <span class="value">www.xueersi.com</span>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 keyValue">
+              <span class="key">应用类型：</span>
+              <span class="value">git@xueersi.com/fabu.git</span>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 keyValue">
+              <span class="key">创建时间：</span>
+              <span class="value">10.1.10.19</span>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 keyValue">
+              <span class="key">域名：</span>
+              <span class="value">学而思网校</span>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 keyValue">
+              <span class="key">Wiki地址：</span>
+              <span class="value">www.xueersi.com</span>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 keyValue">
+              <span class="key">仓库地址：</span>
+              <span class="value">git@xueersi.com/fabu.git</span>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 keyValue">
+              <span class="key">应用Key：</span>
+              <span class="value">10.1.10.19</span>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 keyValue">
+              <span class="key">应用框架类型：</span>
+              <span class="value">学而思网校</span>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 keyValue">
+              <span class="key">灰度机器：</span>
+              <span class="value">www.xueersi.com</span>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 keyValue">
+              <span class="key">测试机器：</span>
+              <span class="value">git@xueersi.com/fabu.git</span>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 keyValue">
+              <span class="key">部署机器：</span>
+              <span class="value">10.1.10.19</span>
+            </div>
+            <div class="col-sm-12 keyValue">
+              <div class="key">
+                <span class="key">应用描述：</span>
+              </div>
+              <div class="value">
+                <span class="value">学而思网校,提供小初高全学科一站式课外教学,"直播+辅导"双师教学模式,大幅提升学习效果,超过600万中小学生正在学而思网校 高效学习!</span>
+              </div>
+            </div>
+            <div class="col-sm-12 keyValue">
+              <div class="key">
+                <span class="key">应用角色：</span>
+              </div>
+              <div class="value">
+                <div class="badgeRole">
+                  <img src="../images/food.jpg" alt="头像" class="photo img-circle">
+                  <span class="role img-circle">产</span>
+                  <p class="userName">张某</p>
+                </div>
+                <div class="badgeRole">
+                  <img src="../images/food.jpg" alt="头像" class="photo img-circle">
+                  <span class="role img-circle">产</span>
+                  <p class="userName">张某</p>
+                </div>
+                <div class="badgeRole">
+                  <img src="../images/food.jpg" alt="头像" class="photo img-circle">
+                  <span class="role img-circle">产</span>
+                  <p class="userName">张某</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 应用信息 end -->
+      <!-- 上线信息 start -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">上线信息</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row field">
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 keyValue">
+              <span class="key">上线ID：</span>
+              <span class="value">学而思网校</span>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 keyValue">
+              <span class="key">上线内容标题：</span>
+              <span class="value">www.xueersi.com</span>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 keyValue">
+              <span class="key">上线申请详情：</span>
+              <span class="value">git@xueersi.com/fabu.git</span>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 keyValue">
+              <span class="key">创建时间：</span>
+              <span class="value">10.1.10.19</span>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 keyValue">
+              <span class="key">申请人：</span>
+              <span class="value">学而思网校</span>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 keyValue">
+              <span class="key">Tag版本：</span>
+              <span class="value">www.xueersi.com</span>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 keyValue">
+              <span class="key">项目审批人：</span>
+              <span class="value">git@xueersi.com/fabu.git</span>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 keyValue">
+              <span class="key">项目抄送人：</span>
+              <span class="value">10.1.10.19</span>
+            </div>
+            <div class="col-sm-12 keyValue">
+              <div class="key">
+                <span class="key">项目审批人：</span>
+              </div>
+              <div class="value">
+                <div class="badgeRole">
+                  <img src="../images/food.jpg" alt="头像" class="photo img-circle">
+                  <span class="role img-circle">产</span>
+                  <p class="userName">张某</p>
+                </div>
+                <div class="badgeRole">
+                  <img src="../images/food.jpg" alt="头像" class="photo img-circle">
+                  <span class="role img-circle">产</span>
+                  <p class="userName">张某</p>
+                </div>
+                <div class="badgeRole">
+                  <img src="../images/food.jpg" alt="头像" class="photo img-circle">
+                  <span class="role img-circle">产</span>
+                  <p class="userName">张某</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 keyValue">
+              <div class="key">
+                <span class="key">项目抄送人：</span>
+              </div>
+              <div class="value">
+                <div class="badgeRole">
+                  <img src="../images/food.jpg" alt="头像" class="photo img-circle">
+                  <span class="role img-circle">产</span>
+                  <p class="userName">张某</p>
+                </div>
+                <div class="badgeRole">
+                  <img src="../images/food.jpg" alt="头像" class="photo img-circle">
+                  <span class="role img-circle">产</span>
+                  <p class="userName">张某</p>
+                </div>
+                <div class="badgeRole">
+                  <img src="../images/food.jpg" alt="头像" class="photo img-circle">
+                  <span class="role img-circle">产</span>
+                  <p class="userName">张某</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 上线信息 end -->
+      <!-- 审核 start -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">审核</h3>
+        </div>
+        <div class="panel-body">
+          <form action="" id="auditForm">
+            <div class="row">
+              <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
+                <textarea class="form-control" rows="5" placeholder="请输入审批意见"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="panel-footer">
+          <button type="button" class="btn btn-primary btn-margin" id="pass">通过</button>
+          <button type="button" class="btn btn-default btn-margin" id="reject">拒绝</button>
+        </div>
+      </div>
+      <!-- 审核 end -->
+      <!-- 每个页面的主要内容 end -->
+    </div>
+  </div>
+  <!-- 右边部分 end -->
+</body>
+</html>
