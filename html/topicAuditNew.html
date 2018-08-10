@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>topicAuditNew</title>
+  <!-- <link rel="stylesheet" href="../style/bootstrap.css"> -->
+  <!-- <link rel="stylesheet" href="../style/bootstrap.4.0.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-iconic@1.1.1/font/css/open-iconic-bootstrap.css">
+  <link rel="stylesheet" href="../style/common.css">
+  <!-- 每个页面相应的样式 start -->
+  <!-- <link rel="stylesheet" href="../style/app.css"> -->
+  <style>
+  </style>
+  <!-- 每个页面相应的样式 end -->
+  <script src="../script/jquery.min.js"></script>
+  <!-- <script src="../script/popper.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js"></script> -->
+  <!-- <script src="https://cdn.bootcss.com/popper.js/1.12.9/popper.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+  <!-- <script src="../script/bootstrap.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.js"></script>
+  <script>
+    $(document).ready(function () {
+      console.log(2)
+    })
+  </script>
+</head>
+<body>
+  
+  <!-- 导航部分 start -->
+  <nav id="left">
+    <header>
+      <img src="../images/mountain.jpg" alt="系统图标" class="systomLogo">
+      <span>AntDesign</span>
+    </header>
+    <ul class="navList">
+      <a href="#">
+        <li class="active">
+          <span class="glyphicon glyphicon-cog"></span>
+          <span>应用</span>
+        </li>
+      </a>
+      <a href="#">
+      <li>
+        <span class="glyphicon glyphicon-edit"></span>
+        <span>测试发布</span>
+      </li>
+      </a>
+      <li>
+        <span class="glyphicon glyphicon-calendar"></span>
+        <span>上线发布</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-list-alt"></span>
+        <span>工作台</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-ok-sign"></span>
+        <span>操作日志</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-list-alt"></span>
+        <span>问题反馈&使用帮助</span>
+      </li>
+    </ul>
+  </nav>
+  <!-- 导航部分 end -->
+  <!-- 右边部分 start -->
+  <div id="right">
+    <!-- 头部 start -->
+    <header class="header row">
+      <!-- 这是bootstrap3的样式相符合的html end -->
+      <div class="dropdownMenuBox col-sm-6">
+        <div class="dropdown">
+          <span class="oi oi-menu dropdown-toggle" title="菜单" aria-hidden="true" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></span>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="operateBox col-sm-6">
+        <span class="oi oi-magnifying-glass marginIcon" aria-hidden="true"></span>
+        <span class="oi oi-list-rich marginIcon" aria-hidden="true"></span>
+        <img src="../images/food.jpg" alt="头像" class="rounded-circle userPhoto">
+        <span class="userName">momo.zxy</span>
+      </div>
+      <!-- 这是bootstrap3的样式相符合的html end -->
+    </header>
+    <!-- 头部 end -->
+    <div class="container-fluid">
+      <!-- 面包屑导航 start -->
+      <header>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">工作台</a></li>
+            <li class="breadcrumb-item"><a href="#">队列审核</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Topic审核</li>
+          </ol>
+        </nav>
+      </header>
+      <!-- 面包屑导航 end -->
+      <!-- 每个页面的主要内容 state -->
+      <!-- 应用信息 start -->
+      <div class="panel">
+        <div class="panel-heading">
+          <h3 class="panel-title">应用信息</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 keyValue">
+              <span class="key">应用名称：</span>
+              <span class="value overflows">直播</span>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 keyValue">
+              <span class="key">应用ID：</span>
+              <span class="value overflows">直播</span>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 keyValue">
+              <span class="key">应用类型：</span>
+              <span class="value overflows">直播</span>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 keyValue">
+              <span class="key">域名：</span>
+              <span class="value overflows">直播</span>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 keyValue">
+              <span class="key">Wiki地址：</span>
+              <span class="value overflows">直播</span>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 keyValue">
+              <span class="key">仓库地址：</span>
+              <span class="value overflows">直播</span>
+            </div>
+            <div class="col-sm-12 keyValue">
+              <span class="key">应用描述：</span>
+              <span class="value">直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 应用信息 end -->
+      <!-- 申请信息 start -->
+      <div class="panel">
+        <div class="panel-heading">
+          <h3 class="panel-title">申请信息</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-12 keyValue">
+              <span class="key">申请类型：</span>
+              <span class="value overflows">直播</span>
+            </div>
+            <div class="col-sm-12 keyValue">
+              <span class="key">Partitions：</span>
+              <span class="value overflows">直播</span>
+            </div>
+            <div class="col-sm-12 keyValue">
+              <span class="key">Replication Factor：</span>
+              <span class="value overflows">直播</span>
+            </div>
+            <div class="col-sm-12 keyValue">
+              <span class="key">申请描述：</span>
+              <span class="value">直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播直播</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 申请信息 end -->
+      <!-- 审核 start -->
+      <div class="panel">
+        <div class="panel-heading">
+          <h3 class="panel-title">审核</h3>
+        </div>
+        <div class="panel-body">
+          <p>请为将要创建的Vhost分配一个集群</p>
+          <div class="row">
+            <form action="#" class="form-horizontal col-sm-12 col-xs-12">
+              <div class="form-group">
+                <select name="cluster" class="col-lg-3 col-md-4 col-sm-6 col-xs-8 form-control" id="cluster">
+                  <option value="0">0</option>
+                  <option value="0">0</option>
+                  <option value="0">0</option>
+                  <option value="0">0</option>
+                </select>
+              </div>
+              <div class="radio">
+                <label for="" class="radio-inline">更多配置：</label>
+                <label for="open" class="radio-inline">
+                  <input type="radio" name="moveSwitch" id="open"> 开
+                </label>
+                <label for="close" class="radio-inline">
+                  <input type="radio" name="moveSwitch" id="close"> 关
+                </label>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="form-group">
+                    <label for="retentionMs" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 control-label">retention.ms:</label>
+                    <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
+                      <input type="text" name="retentionMs" class="form-control" id="retentionMs">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="form-group">
+                    <label for="maxMessageBytes" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 control-label">max.message.bytes:</label>
+                    <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
+                      <input type="text" name="maxMessageBytes" class="form-control" id="maxMessageBytes">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="form-group">
+                    <label for="segmentIndexBytes" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 control-label">segment.index.bytes:</label>
+                    <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
+                      <input type="text" name="segmentIndexBytes" class="form-control" id="segmentIndexBytes">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="form-group">
+                    <label for="segmentBytes" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 control-label">segment.bytes:</label>
+                    <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
+                      <input type="text" name="segmentBytes" class="form-control" id="segmentBytes">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="form-group">
+                    <label for="minCleanableDirtyRatio" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 control-label">min.cleanable.dirty.ratio:</label>
+                    <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
+                      <input type="text" name="minCleanableDirtyRatio" class="form-control" id="minCleanableDirtyRatio">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="form-group">
+                    <label for="minInsyncReplicas" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 control-label">min.insync.replicas:</label>
+                    <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
+                      <input type="text" name="minInsyncReplicas" class="form-control" id="minInsyncReplicas">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="form-group">
+                    <label for="deleteRetentionMs" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 control-label">delete.retention.ms:</label>
+                    <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
+                      <input type="text" name="deleteRetentionMs" class="form-control" id="deleteRetentionMs">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="form-group">
+                    <label for="flushMessages" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 control-label">flush.messages:</label>
+                    <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
+                      <input type="text" name="flushMessages" class="form-control" id="flushMessages">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="form-group">
+                    <label for="preallocate" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 control-label">preallocate:</label>
+                    <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
+                      <input type="text" name="preallocate" class="form-control" id="preallocate">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="form-group">
+                    <label for="retentionBytes" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 control-label">retention.bytes:</label>
+                    <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
+                      <input type="text" name="retentionBytes" class="form-control" id="retentionBytes">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="form-group">
+                    <label for="flushMs" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 control-label">flush.ms:</label>
+                    <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
+                      <input type="text" name="flushMs" class="form-control" id="flushMs">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="form-group">
+                    <label for="cleanupPolicy" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 control-label">cleanup.policy:</label>
+                    <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
+                      <input type="text" name="cleanupPolicy" class="form-control" id="cleanupPolicy">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="form-group">
+                    <label for="fileDeleteDelayMs" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 control-label">file.delete.delay.ms:</label>
+                    <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
+                      <input type="text" name="fileDeleteDelayMs" class="form-control" id="fileDeleteDelayMs">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="form-group">
+                    <label for="segmentJitterMs" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 control-label">segment.jitter.ms:</label>
+                    <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
+                      <input type="text" name="segmentJitterMs" class="form-control" id="segmentJitterMs">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="form-group">
+                    <label for="indexIntervalBytes" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 control-label">index.interval.bytes:</label>
+                    <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
+                      <input type="text" name="indexIntervalBytes" class="form-control" id="indexIntervalBytes">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="form-group">
+                    <label for="compressionType" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 control-label">compression.type:</label>
+                    <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
+                      <input type="text" name="compressionType" class="form-control" id="compressionType">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="form-group">
+                    <label for="segmentMs" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 control-label">segment.ms:</label>
+                    <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
+                      <input type="text" name="segmentMs" class="form-control" id="segmentMs">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="form-group">
+                    <label for="uncleanLeaderElectionEnable" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 control-label">unclean.leader.election.enable:</label>
+                    <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
+                      <input type="text" name="uncleanLeaderElectionEnable" class="form-control" id="uncleanLeaderElectionEnable">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="panel-footer">
+          <button type="button" class="btn btn-primary marginRight">通过</button>
+          <button type="button" class="btn btn-default marginRight">拒绝</button>
+        </div>
+      </div>
+      <!-- 审核 end -->
+      <!-- 每个页面的主要内容 end -->
+    </div>
+  </div>
+  <!-- 右边部分 end -->
+</body>
+</html>

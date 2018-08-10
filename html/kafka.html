@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>kafka</title>
+  <!-- <link rel="stylesheet" href="../style/bootstrap.css"> -->
+  <!-- <link rel="stylesheet" href="../style/bootstrap.4.0.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-iconic@1.1.1/font/css/open-iconic-bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.12.1/src/bootstrap-table.css">
+  <link rel="stylesheet" href="../style/common.css">
+  <!-- 每个页面相应的样式 start -->
+  <!-- <link rel="stylesheet" href="../style/app.css"> -->
+  <style>
+    .form-horizontal .radio {
+      margin-bottom: 15px;
+    }
+  </style>
+  <!-- 每个页面相应的样式 end -->
+  <script src="../script/jquery.min.js"></script>
+  <!-- <script src="../script/popper.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js"></script> -->
+  <!-- <script src="https://cdn.bootcss.com/popper.js/1.12.9/popper.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.12.1/src/bootstrap-table.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.12.1/dist/locale/bootstrap-table-zh-CN.js"></script>
+  <script>
+    $(document).ready(function () {
+      var layerMsg = function (o) {
+        /*o = {
+          message: 'string',
+          statusNumber: number,
+          time: number
+        }*/
+        laery.msg(
+          o.message || '失败', 
+          {
+            icon: o.statusNumber || 2,
+            time: o.time || 800
+          }
+        )
+      }
+      var table = {
+        init: function ($table, tableParams) {
+          $table.bootstrapTable(tableParams)
+        },
+        refreshData: function ($table, ajaxParams) {
+          $.ajax({
+            url: ajaxParams.url,
+            type: ajaxParams.type,
+            data: ajaxParams.data,
+            success: function (response) {
+              if (!response.status) {
+                $table.bootstrapTable('refreshOptions', {
+                  data: response.data
+                })
+              } else {
+                layerMsg({
+                  message: '数据刷新失败',
+                  statusNumber: 2,
+                  time: 800
+                })
+              }
+            },
+            error: function (error) {
+              layerMsg({
+                message: '数据刷新失败',
+                statusNumber: 2,
+                time: 800
+              })
+            }
+          })
+        }
+      }
+
+      // table 的假数据 start
+      var dataKafkaTable = [
+        {
+          topic: 'appName',
+          serverIP: 'appId',
+          serverPort: 'createTime',
+          brokers: 'describe',
+          partitions: 'describe',
+          replicas: 'describe',
+          status: 'describe'
+        },
+        {
+          topic: 'appName',
+          serverIP: 'appId',
+          serverPort: 'createTime',
+          brokers: 'describe',
+          partitions: 'describe',
+          replicas: 'describe',
+          status: 'describe'
+        },
+        {
+          topic: 'appName',
+          serverIP: 'appId',
+          serverPort: 'createTime',
+          brokers: 'describe',
+          partitions: 'describe',
+          replicas: 'describe',
+          status: 'describe'
+        },
+        {
+          topic: 'appName',
+          serverIP: 'appId',
+          serverPort: 'createTime',
+          brokers: 'describe',
+          partitions: 'describe',
+          replicas: 'describe',
+          status: 'describe'
+        },
+        {
+          topic: 'appName',
+          serverIP: 'appId',
+          serverPort: 'createTime',
+          brokers: 'describe',
+          partitions: 'describe',
+          replicas: 'describe',
+          status: 'describe'
+        }
+      ]
+      // table 的假数据 end
+      // table init
+      var kafkaColumns = [
+        {
+          title: 'Topic',
+          field: 'topic'
+        },
+        {
+          title: '服务IP',
+          field: 'serverIP'
+        },
+        {
+          title: '服务端口',
+          field: 'serverPort'
+        },
+        {
+          title: 'Brokers',
+          field: 'brokers'
+        },
+        {
+          title: 'Partitions',
+          field: 'partitions'
+        },
+        {
+          title: 'Replicas',
+          field: 'replicas'
+        },
+        {
+          title: '状态',
+          field: 'status'
+        },
+        {
+          title: '操作',
+          field: ''
+        }
+      ]
+      table.init($('#kafkaTable'), {
+        data: dataKafkaTable,
+        search: true,
+        searchAlign: 'left',
+        pagination: true,
+        columns: kafkaColumns
+      })
+
+      $('#applyTopicButton').on('click', function () {
+        $('#myModal').modal('toggle')
+      })
+      $('#addClusterButton').on('click', function () {
+        console.log(2)
+      })
+
+
+
+    })
+  </script>
+</head>
+<body>
+  
+  <!-- 导航部分 start -->
+  <nav id="left">
+    <header>
+      <img src="../images/mountain.jpg" alt="系统图标" class="systomLogo">
+      <span>AntDesign</span>
+    </header>
+    <ul class="navList">
+      <a href="#">
+        <li class="active">
+          <span class="glyphicon glyphicon-cog"></span>
+          <span>应用</span>
+        </li>
+      </a>
+      <a href="#">
+      <li>
+        <span class="glyphicon glyphicon-edit"></span>
+        <span>测试发布</span>
+      </li>
+      </a>
+      <li>
+        <span class="glyphicon glyphicon-calendar"></span>
+        <span>上线发布</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-list-alt"></span>
+        <span>工作台</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-ok-sign"></span>
+        <span>操作日志</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-list-alt"></span>
+        <span>问题反馈&使用帮助</span>
+      </li>
+    </ul>
+  </nav>
+  <!-- 导航部分 end -->
+  <!-- 右边部分 start -->
+  <div id="right">
+    <!-- 头部 start -->
+    <header class="header row">
+      <!-- 这是bootstrap3的样式相符合的html end -->
+      <div class="dropdownMenuBox col-sm-6">
+        <div class="dropdown">
+          <span class="oi oi-menu dropdown-toggle" title="菜单" aria-hidden="true" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></span>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="operateBox col-sm-6">
+        <span class="oi oi-magnifying-glass marginIcon" aria-hidden="true"></span>
+        <span class="oi oi-list-rich marginIcon" aria-hidden="true"></span>
+        <img src="../images/food.jpg" alt="头像" class="rounded-circle userPhoto">
+        <span class="userName">momo.zxy</span>
+      </div>
+      <!-- 这是bootstrap3的样式相符合的html end -->
+    </header>
+    <!-- 头部 end -->
+    <div class="container-fluid">
+      <!-- 面包屑导航 start -->
+      <header>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <div class="dropdown">
+                <span class="dropdown-toggle" title="菜单" aria-hidden="true" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  应用名称
+                  <span class="caret"></span>
+                </span>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a href="#" data_id="1" class="appName active">Action</a></li>
+                  <li><a href="#" data_id="2" class="appName">Another action</a></li>
+                  <li><a href="#" data_id="3" class="appName">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#" data_id="4" class="appName">Separated link</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="breadcrumb-item"><a href="#">队列</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Kafka</li>
+          </ol>
+        </nav>
+      </header>
+      <!-- 面包屑导航 end -->
+      <!-- 每个页面的主要内容 state -->
+      <!-- kafka集群 start -->
+      <div class="panel">
+        <div class="panel-heading">
+          <h3 class="panel-title">Topic列表</h3>
+        </div>
+        <div class="panel-body">
+          <button type="button" class="btn btn-primary" id="applyTopicButton">申请Topic</button>
+          <table id="kafkaTable"></table>
+        </div>
+      </div>
+      <!-- kafka集群 end -->
+      <!-- 每个页面的主要内容 end -->
+    </div>
+  </div>
+  <!-- 右边部分 end -->
+  <!-- modal start -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">新的集群</h4>
+        </div>
+        <div class="modal-body">
+          <form action="#" class="form-horizontal">
+            <!-- <div class="form-group">
+              <label for="" class="col-lg-4 col-md-4 col-sm-3 col-xs-12 control-label"></label>
+              <div class="radio col-lg-8 col-md-8 col-sm-9 col-xs-12">
+                <label for="newTopic" class="radio-inline">
+                  <input type="radio" name="topicType" id="newTopic"> 新的Topic
+                </label>
+                <label for="visitTopic" class="radio-inline">
+                  <input type="radio" name="topicType" id="visitTopic"> 访问Topic
+                </label>
+              </div>
+            </div> -->
+
+              
+            <!-- <div class="radio col-md-11 col-md-offset-2 offset-md-1"> -->
+            <div class="radio">
+              <label for="newTopic" class="radio-inline">
+                <input type="radio" name="topicType" id="newTopic"> 新的Topic
+              </label>
+              <label for="visitTopic" class="radio-inline">
+                <input type="radio" name="topicType" id="visitTopic"> 访问Topic
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="partitions" class="col-lg-4 col-md-4 col-sm-3 col-xs-12 control-label" style="text-align: left;">Partitions:</label>
+              <div class="col-lg-8 col-md-8 col-sm-9 col-xs-12">
+                <input type="text" name="partitions" class="form-control" id="partitions">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="replicationFactor" class="col-lg-4 col-md-4 col-sm-3 col-xs-12 control-label" style="text-align: left;">Replication Factor:</label>
+              <div class="col-lg-8 col-md-8 col-sm-9 col-xs-12">
+                <input type="text" name="replicationFactor" class="form-control" id="replicationFactor">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="selectApp" class="col-lg-3 col-md-3 col-sm-3 col-xs-12 control-label" style="text-align: left;">要访问的：</label>
+              <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                <select name="selectApp" class="form-control" id="selectApp">
+                  <option value="0">0</option>
+                  <option value="0">0</option>
+                  <option value="0">0</option>
+                  <option value="0">0</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="selectVisitTopic" class="col-lg-3 col-md-3 col-sm-3 col-xs-12 control-label" style="text-align: left;"></label>
+              <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                <select name="selectVisitTopic" class="form-control" id="selectVisitTopic">
+                  <option value="0">0</option>
+                  <option value="0">0</option>
+                  <option value="0">0</option>
+                  <option value="0">0</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="reason" class="col-lg-3 col-md-3 col-sm-3 col-xs-12 control-label" style="text-align: left; margin-bottom: 5px;">Kafka version:</label>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <textarea name="reason" rows="4" class="form-control" id="reason" placeholder="最多200个字符" maxlength="3"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary" id="addClusterButton">确定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal end -->
+</body>
+</html>
